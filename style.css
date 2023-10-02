@@ -1,0 +1,31 @@
+
+
+table,
+th,
+td {
+  border: 1px solid #595959;
+  border-collapse: collapse;
+  border-spacing: 2px;
+  padding: 5px;
+}
+table {
+  width: 100%;
+}
+caption {
+  color: rgb(92, 32, 255)
+  font-family: "Amatic SC";
+  font-size: 45px;
+  line-height: 70px;
+}
+th {
+  color: #ffedd8;
+  background-color: rgb(92, 32, 255);
+}
+tr:nth-child(even) {
+  /* esta funcion con parametro even selecciona los
+  renglones pares, odd= impar*/
+  background-color: #eeeaeb;
+}
+tr:nth-child(odd) {
+  background-color: #c0d6df;
+}

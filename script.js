@@ -2,6 +2,7 @@ const lista = document.getElementById("lista");
 const submitBtn = document.getElementById("submit");
 const URL = "productos.json"
 const seleccionadoDiv = document.getElementById("seleccionado");
+const inputCantidad = document.getElementByClass("cantidad");
 
 
 fetch(URL)
@@ -20,11 +21,10 @@ function showData(data) {
         <tr>
             <td>${element.producto}</td>
             <td>${element.precio}</td>
-            <td><input type="number" min="0"></td>
-            
+            <td class="cantidad"><input type="number" min="0"></td>
+            <td class="subTotal"></td>
         </tr>`;
     });
-
     /*lista.innerHTML = option.HTML;*/
 
     lista.addEventListener("change", () => {
@@ -32,5 +32,20 @@ function showData(data) {
         seleccionadoDiv.innerHTML = `Seleccionado: ${opcionSeleccionada}`;
     })
 
+
+}
+
+
+inputCantidad.addEventListener("change", () =>{
+    const mostrarSubTotal = document.getElementsByClassName("subTotal");
+    mostrarSubTotal = "";
+    const precioSubTotal = data.precio * inputCantidad;
+    mostrarSubTotal.innerHTML = `
+        ${precioSubTotal};
+    `
+})
+
+function subTotal() {
+    
 }
 
