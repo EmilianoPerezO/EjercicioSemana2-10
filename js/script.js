@@ -21,7 +21,8 @@ function showData(data) {
         <tr>
             <td>${element.producto}</td>
             <td>${element.precio}</td>
-            <td class="cantidad"><input type="number" min="0"><button id="btnAdd">add</button></td>
+            <td class="cantidad"><input type="number" min="0"><button 
+            class="btn btn-primary" id="btnAdd">add</button></td>
             <td class="subTotal"></td>
         </tr>`;
     });

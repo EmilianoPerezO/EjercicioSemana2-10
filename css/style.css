@@ -1,21 +1,21 @@
 #lista {
-  max-height: 300px; /* Ajusta la altura máxima que desees para la tabla */
+  max-height: 700spx; /* Ajusta la altura máxima que desees para la tabla */
   overflow-y: auto; /* Agrega un desplazamiento vertical cuando sea necesario */
 }
 
 table,
 th,
 td {
-  border: 1px solid #595959;
+  border: 1px solid #ddd4d4;
   border-collapse: collapse;
-  border-spacing: 2px;
-  padding: 5px;
+  border-spacing: 1px;
+  padding: 1px;
 }
 table {
   width: 100%;
 }
 th {
-  color: #ffedd8;
+  color: #e3b27a;
   background-color: rgb(92, 32, 255);
 }
 tr:nth-child(even) {
@@ -25,5 +25,5 @@ tr:nth-child(even) {
 }
 
 tr:nth-child(odd) {
-  background-color: #dfe5e7;
+  background-color: #bcc9ce;
 }
