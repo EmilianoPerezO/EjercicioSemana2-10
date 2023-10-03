@@ -1,4 +1,7 @@
-
+#lista {
+  max-height: 300px; /* Ajusta la altura máxima que desees para la tabla */
+  overflow-y: auto; /* Agrega un desplazamiento vertical cuando sea necesario */
+}
 
 table,
 th,
@@ -11,21 +14,16 @@ td {
 table {
   width: 100%;
 }
-caption {
-  color: rgb(92, 32, 255)
-  font-family: "Amatic SC";
-  font-size: 45px;
-  line-height: 70px;
-}
 th {
   color: #ffedd8;
   background-color: rgb(92, 32, 255);
 }
 tr:nth-child(even) {
   /* esta funcion con parametro even selecciona los
-  renglones pares, odd= impar*/
-  background-color: #eeeaeb;
+  renglones pares, odd= impar */
+  background-color: #fac5d2;
 }
+
 tr:nth-child(odd) {
-  background-color: #c0d6df;
+  background-color: #dfe5e7;
 }
