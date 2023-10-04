@@ -4,6 +4,8 @@ const URL = "productos.json"
 const seleccionadoDiv = document.getElementById("seleccionado");
 const inputCantidad = document.getElementsByClassName("cantidad");
 
+const productosCarrito = [];
+
 
 fetch(URL)
     .then(response => response.json())
@@ -15,7 +17,6 @@ fetch(URL)
 
 
 function showData(data) {
-    /*let optionsHTML = ""; */
     data.forEach(element => {
         lista.innerHTML += `
         <tr>
@@ -23,30 +24,32 @@ function showData(data) {
             <td>${element.precio}</td>
             <td class="cantidad"><input type="number" min="0"><button 
             class="btn btn-primary" id="btnAdd">add</button></td>
-            <td class="subTotal"></td>
+            
         </tr>`;
+
+
+
     });
-    /*lista.innerHTML = option.HTML;*/
+    const btnAdd = document.getElementById("btnAdd");
+    btnAdd.addEventListener("click", () => {
+        const newProduct = {
+            id: `${element.id}`,
+            producto: `${element.producto}`,
+            precio: `${element.precio}`
+            // cantidad: `${inputCantidad}`
+        }
+        console.log(newProduct);
+        productosCarrito.push(newProduct);
 
-    lista.addEventListener("change", () => {
-        const opcionSeleccionada = lista.option[lista.id].text;
-        seleccionadoDiv.innerHTML = `Seleccionado: ${opcionSeleccionada}`;
+
     })
+    /*
+        lista.addEventListener("change", () => {
+            const opcionSeleccionada = lista.option[lista.id].text;
+            seleccionadoDiv.innerHTML = `Seleccionado: ${opcionSeleccionada}`;
+        })
+    */
+
 
 
 }
-
-
-inputCantidad.addEventListener("change", () =>{
-    const mostrarSubTotal = document.getElementsByClassName("subTotal");
-    mostrarSubTotal = "";
-    const precioSubTotal = data.precio * inputCantidad;
-    mostrarSubTotal.innerHTML = `
-        ${precioSubTotal};
-    `
-})
-
-function subTotal() {
-    
-}
-

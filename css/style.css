@@ -1,6 +1,8 @@
 #lista {
-  max-height: 700spx; /* Ajusta la altura máxima que desees para la tabla */
-  overflow-y: auto; /* Agrega un desplazamiento vertical cuando sea necesario */
+  max-height: 700spx;
+  /* Ajusta la altura máxima que desees para la tabla */
+  overflow-y: auto;
+  /* Agrega un desplazamiento vertical cuando sea necesario */
 }
 
 table,
@@ -11,13 +13,16 @@ td {
   border-spacing: 1px;
   padding: 1px;
 }
+
 table {
   width: 100%;
 }
+
 th {
   color: #e3b27a;
   background-color: rgb(92, 32, 255);
 }
+
 tr:nth-child(even) {
   /* esta funcion con parametro even selecciona los
   renglones pares, odd= impar */
@@ -26,4 +31,8 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
   background-color: #bcc9ce;
+}
+
+h1 {
+  text-align: center;
 }
