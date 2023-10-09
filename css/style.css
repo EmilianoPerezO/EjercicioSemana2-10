@@ -8,7 +8,7 @@
 table,
 th,
 td {
-  border: 1px solid #ddd4d4;
+  border: 1px solid #b8b8b8;
   border-collapse: collapse;
   border-spacing: 1px;
   padding: 1px;
@@ -18,21 +18,16 @@ table {
   width: 100%;
 }
 
-th {
-  color: #e3b27a;
-  background-color: rgb(92, 32, 255);
-}
-
 tr:nth-child(even) {
   /* esta funcion con parametro even selecciona los
   renglones pares, odd= impar */
-  background-color: #fac5d2;
+  background-color: #7a1c1c;
 }
 
 tr:nth-child(odd) {
-  background-color: #bcc9ce;
+  background-color: #3a0000;
 }
 
-h1 {
-  text-align: center;
+.numero {
+  color: white;
 }
